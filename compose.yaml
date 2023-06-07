@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  go:
+    image: go:latest
+    container_name: go
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/go/src/app
+    tty: true
